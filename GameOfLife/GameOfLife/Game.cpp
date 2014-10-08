@@ -25,12 +25,11 @@ void Game::run()
 {
 	string s = "";
 
-	board->print();
 	while(true)
 	{
+		board->print();
 		board->prepUpdate();
 		board->update();
-		board->print();
 
 		cin >> s;
 		if(s == "quit")

@@ -9,7 +9,12 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Game* game = new Game(5);
+	cout << "How large would you like the grid? ";
+	int size;
+	cin >> size;
+	cout << endl;
+
+	Game* game = new Game(size);
 	game->run();
 
 	int c;
