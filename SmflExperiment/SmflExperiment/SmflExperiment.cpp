@@ -3,12 +3,30 @@
 
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
+#include "Game.h"
+#include <iostream> 
+#include <string>
+using namespace std;
+using std::string;
 
 //TODO: look at http://stackoverflow.com/questions/3563756/fatal-error-lnk1112-module-machine-type-x64-conflicts-with-target-machine-typ
 //				http://sfml-dev.org/tutorials/2.1/start-vc.php 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	/*cout << "How large would you like the grid? ";
+	int size;
+	cin >> size;
+	cout << endl;
+
+	Game* game = new Game(size);
+	game->run();
+
+	int c;
+	cin >> c;
+
+	return 0;*/
+
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);

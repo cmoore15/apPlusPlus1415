@@ -1,4 +1,4 @@
-﻿Build started 10/10/2014 12:12:05 PM.
+﻿Build started 10/14/2014 12:39:09 PM.
      1>Project "C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\GameOfLife\GameOfLife\GameOfLife.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\moorcar15\Downloads\SFML-2.1-windows-vc11-64bits\SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameOfLife.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt GameOfLife.cpp
@@ -9,9 +9,25 @@
          Debug\Game.obj
          Debug\GameOfLife.obj
          Debug\stdafx.obj
-         GameOfLife.vcxproj -> C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\GameOfLife\Debug\GameOfLife.exe
-     1>Done Building Project "C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\GameOfLife\GameOfLife\GameOfLife.vcxproj" (Build target(s)).
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: __thiscall sf::String::String(char const *,class std::locale const &)" (??0String@sf@@QAE@PBDABVlocale@std@@@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: __thiscall sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (??0VideoMode@sf@@QAE@III@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: void __thiscall sf::Window::close(void)" (?close@Window@sf@@QAEXXZ) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: bool __thiscall sf::Window::isOpen(void)const " (?isOpen@Window@sf@@QBE_NXZ) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: bool __thiscall sf::Window::pollEvent(class sf::Event &)" (?pollEvent@Window@sf@@QAE_NAAVEvent@2@@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: void __thiscall sf::Window::display(void)" (?display@Window@sf@@QAEXXZ) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: __thiscall sf::Color::Color(unsigned char,unsigned char,unsigned char,unsigned char)" (??0Color@sf@@QAE@EEEE@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: void __thiscall sf::RenderTarget::clear(class sf::Color const &)" (?clear@RenderTarget@sf@@QAEXABVColor@2@@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: void __thiscall sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (?draw@RenderTarget@sf@@QAEXABVDrawable@2@ABVRenderStates@2@@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: __thiscall sf::RenderWindow::RenderWindow(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (??0RenderWindow@sf@@QAE@VVideoMode@1@ABVString@1@IABUContextSettings@1@@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall sf::RenderWindow::~RenderWindow(void)" (??1RenderWindow@sf@@UAE@XZ) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall sf::Shape::~Shape(void)" (??1Shape@sf@@UAE@XZ) referenced in function "public: virtual __thiscall sf::CircleShape::~CircleShape(void)" (??1CircleShape@sf@@UAE@XZ)
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: void __thiscall sf::Shape::setFillColor(class sf::Color const &)" (?setFillColor@Shape@sf@@QAEXABVColor@2@@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2019: unresolved external symbol "public: __thiscall sf::CircleShape::CircleShape(float,unsigned int)" (??0CircleShape@sf@@QAE@MI@Z) referenced in function _wmain
+     1>GameOfLife.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Green" (?Green@Color@sf@@2V12@B)
+     1>GameOfLife.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+     1>C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\GameOfLife\Debug\GameOfLife.exe : fatal error LNK1120: 16 unresolved externals
+     1>Done Building Project "C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\GameOfLife\GameOfLife\GameOfLife.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:02.55
+Time Elapsed 00:00:03.13
