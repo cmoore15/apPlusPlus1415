@@ -3,6 +3,7 @@
 #include "Cell.h"
 #include <vector> 
 #include <string>
+#include "Global.h"
 using std::vector;
 using std::string;
 
@@ -10,15 +11,19 @@ Cell::Cell(int x, int y)
 {
 	val = false;
 	next = false;
-	rect = *(new RectangleShape(Vector2f(5, 5)));
+	rect = *(new RectangleShape(Vector2f(Global::CELL_SIZE - 1, Global::CELL_SIZE - 1)));
 	rect.setOrigin(x, y);
+	rect.setOutlineThickness(1);
+	rect.setOutlineColor(Color(50, 50, 50));
+
+	updateRect();
 }
 
 Cell::Cell(bool v, int x, int y)
 {
 	val = v;
 	next = false;
-	rect = *(new RectangleShape(Vector2f(14, 14)));
+	rect = *(new RectangleShape(Vector2f(Global::CELL_SIZE - 1, Global::CELL_SIZE - 1)));
 	rect.setOrigin(x, y);
 	rect.setOutlineThickness(1);
 	rect.setOutlineColor(Color(50, 50, 50));
@@ -109,4 +114,17 @@ void Cell::updateRect()
 	{
 		rect.setFillColor(Color(100, 100, 100));
 	}
+
+	/*if(neighbors.size() == 8)
+	{
+		rect.setFillColor(Color(0, 0, 0));
+	}
+	else if(neighbors.size() == 5)
+	{
+		rect.setFillColor(Color(255, 0, 0));
+	}
+	else if(neighbors.size() == 3)
+	{
+		rect.setFillColor(Color(0, 0, 255));
+	}*/
 }

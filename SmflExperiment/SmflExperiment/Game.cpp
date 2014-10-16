@@ -32,7 +32,21 @@ void Game::run(RenderWindow& window)
 		while (window.pollEvent(event))
 		{
 			if (event.type == Event::Closed)
+			{
 				window.close();
+			}
+			/*else if (event.type == Event::KeyPressed)
+			{
+				window.clear();
+
+			board->draw(window);
+			board->prepUpdate();
+			board->update();
+
+			window.display();
+
+			clock.restart();
+			}*/
 		}
 
 		Time elapsed = clock.getElapsedTime();

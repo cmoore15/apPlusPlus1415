@@ -3,6 +3,7 @@
 #include "Board.h"
 #include <vector> 
 #include <string>
+#include "Global.h"
 using std::vector;
 using std::string;
 using namespace std;
@@ -38,11 +39,11 @@ void Board::initializeCells()
 		{
 			if(j == 10 || i == 10)
 			{
-				cells[i][j] = new Cell(true, i * -15, j * -15);
+				cells[i][j] = new Cell(true, i * -(Global::CELL_SIZE), j * -(Global::CELL_SIZE));
 			}
 			else
 			{
-				cells[i][j] = new Cell(false, i * -15, j * -15);
+				cells[i][j] = new Cell(false, i * -(Global::CELL_SIZE), j * -(Global::CELL_SIZE));
 			}
 		}
 	}

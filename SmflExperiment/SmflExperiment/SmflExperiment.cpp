@@ -6,6 +6,8 @@
 #include "Game.h"
 #include <iostream> 
 #include <string>
+#include "Reference.h"
+#include "Global.h"
 using namespace std;
 using namespace sf;
 using std::string;
@@ -28,9 +30,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	return 0;*/
 
-	RenderWindow window(VideoMode(300, 300), "Game of Life");
+	RenderWindow window(VideoMode(Global::WINDOW_SIZE, Global::WINDOW_SIZE), "Game of Life");
 
-	Game* game = new Game(22);
+	Game* game = new Game(Global::GRID_SIZE);
 	game->run(window);
 
     /*CircleShape shape(90.f);
