@@ -36,13 +36,13 @@ void Board::initializeCells()
 		cells[i].resize(height);
 		for(int j = 0; j < height; j++)
 		{
-			if(j == 2)
+			if(j == 10 || i == 10)
 			{
-				cells[i][j] = new Cell(true);
+				cells[i][j] = new Cell(true, i * -15, j * -15);
 			}
 			else
 			{
-				cells[i][j] = new Cell();
+				cells[i][j] = new Cell(false, i * -15, j * -15);
 			}
 		}
 	}
@@ -104,4 +104,15 @@ void Board::print()
 		cout << endl;
 	}
 	cout << endl;
+}
+
+void Board::draw(RenderWindow& window)
+{
+	for (int i = 0; i < length; i++)
+	{
+		for (int j = 0; j < height; j++)
+		{
+			cells[i][j]->draw(window);
+		}
+	}
 }

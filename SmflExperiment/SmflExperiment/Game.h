@@ -9,6 +9,6 @@ public:
 	Game();
 	Game(int);
 	Game(int, int);
-	void run();
+	void run(RenderWindow&);
 
 };

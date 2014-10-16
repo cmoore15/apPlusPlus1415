@@ -7,6 +7,7 @@
 #include <iostream> 
 #include <string>
 using namespace std;
+using namespace sf;
 using std::string;
 
 //TODO: look at http://stackoverflow.com/questions/3563756/fatal-error-lnk1112-module-machine-type-x64-conflicts-with-target-machine-typ
@@ -27,23 +28,39 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	return 0;*/
 
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+	RenderWindow window(VideoMode(300, 300), "Game of Life");
+
+	Game* game = new Game(22);
+	game->run(window);
+
+    /*CircleShape shape(90.f);
+	shape.setFillColor(Color(100, 230, 120));
+	shape.setOrigin(-10, -10);
+	shape.setOutlineThickness(10);
+	shape.setOutlineColor(Color(100, 100, 100));
+
+	RectangleShape rect(Vector2f(200, 200));
+	rect.setFillColor(Color(100, 50, 200));
+
+	CircleShape shape2(50.f);
+	shape2.setFillColor(Color(0, 30, 255));
+	shape2.setOrigin(-250, -50);
 
     while (window.isOpen())
     {
-        sf::Event event;
+        Event event;
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
+            if (event.type == Event::Closed)
                 window.close();
         }
 
         window.clear();
+		window.draw(rect);
         window.draw(shape);
+		window.draw(shape2);
         window.display();
-    }
+    }*/
 
     return 0;
 }

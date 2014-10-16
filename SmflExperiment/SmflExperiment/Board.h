@@ -19,4 +19,5 @@ public:
 	void prepUpdate();
 	void update();
 	void print();
+	void draw(RenderWindow&);
 };

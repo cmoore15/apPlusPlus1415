@@ -6,16 +6,24 @@
 using std::vector;
 using std::string;
 
-Cell::Cell()
+Cell::Cell(int x, int y)
 {
 	val = false;
 	next = false;
+	rect = *(new RectangleShape(Vector2f(5, 5)));
+	rect.setOrigin(x, y);
 }
 
-Cell::Cell(bool v)
+Cell::Cell(bool v, int x, int y)
 {
 	val = v;
 	next = false;
+	rect = *(new RectangleShape(Vector2f(14, 14)));
+	rect.setOrigin(x, y);
+	rect.setOutlineThickness(1);
+	rect.setOutlineColor(Color(50, 50, 50));
+
+	updateRect();
 }
 
 bool Cell::getVal()
@@ -26,6 +34,8 @@ bool Cell::getVal()
 void Cell::setVal(bool v)
 {
 	val = v;
+
+	updateRect();
 }
 
 void Cell::addNeighbor(Cell* c)
@@ -49,7 +59,7 @@ void Cell::prepUpdate()
 	{
 		next = false;
 	}
-	else if(numAlive <= 3)
+	else if (numAlive <= 3)
 	{
 		next = true;
 	}
@@ -62,6 +72,8 @@ void Cell::prepUpdate()
 void Cell::update()
 {
 	val = next;
+
+	updateRect();
 }
 
 string Cell::toString()
@@ -75,4 +87,26 @@ string Cell::toString()
 		return "0";
 	}
 	
+}
+
+RectangleShape Cell::getRectangle()
+{
+	return rect;
+}
+
+void Cell::draw(RenderWindow& window)
+{
+	window.draw(rect);
+}
+
+void Cell::updateRect()
+{
+	if (val)
+	{
+		rect.setFillColor(Color(100, 230, 120));
+	}
+	else
+	{
+		rect.setFillColor(Color(100, 100, 100));
+	}
 }

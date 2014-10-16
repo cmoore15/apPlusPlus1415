@@ -21,13 +21,41 @@ Game::Game(int l, int h)
 	board = new Board(l, h);
 }
 
-void Game::run()
+void Game::run(RenderWindow& window)
 {
-	string s = "";
+	Time time = milliseconds(500);
+	Clock clock;
+
+	while (window.isOpen())
+	{
+		Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == Event::Closed)
+				window.close();
+		}
+
+		Time elapsed = clock.getElapsedTime();
+		if (elapsed > time)
+		{
+			window.clear();
+
+			board->draw(window);
+			board->prepUpdate();
+			board->update();
+
+			window.display();
+
+			clock.restart();
+		}
+	}
+
+	/*string s = "";
 
 	while(true)
 	{
-		board->print();
+		//board->print();
+		board->draw(window);
 		board->prepUpdate();
 		board->update();
 
@@ -36,5 +64,5 @@ void Game::run()
 		{
 			break;
 		}
-	}
+	}*/
 }

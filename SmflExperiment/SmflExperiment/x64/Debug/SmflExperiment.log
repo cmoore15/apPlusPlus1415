@@ -1,17 +1,9 @@
-﻿Build started 10/14/2014 1:20:36 PM.
-     1>Project "C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\SmflExperiment\SmflExperiment\SmflExperiment.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\moorcar15\Downloads\SFML-2.1-windows-vc11-64bits\SFML-2.1\include" /Zi /nologo /W3 /WX- /sdl /Od /D SMFL_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\SmflExperiment.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt SmflExperiment.cpp
-         SmflExperiment.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\SmflExperiment\x64\Debug\SmflExperiment.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\moorcar15\Downloads\SFML-2.1-windows-vc11-64bits\SFML-2.1\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\SmflExperiment\x64\Debug\SmflExperiment.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\SmflExperiment\x64\Debug\SmflExperiment.lib" /MACHINE:X64 x64\Debug\Board.obj
-         x64\Debug\Cell.obj
-         x64\Debug\Game.obj
-         x64\Debug\SmflExperiment.obj
-         x64\Debug\stdafx.obj
-         SmflExperiment.vcxproj -> C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\SmflExperiment\x64\Debug\SmflExperiment.exe
-     1>Done Building Project "C:\Users\moorcar15\Documents\GitHub\apPlusPlus1415\SmflExperiment\SmflExperiment\SmflExperiment.vcxproj" (Build target(s)).
+﻿Build started 10/15/2014 4:14:45 PM.
+     1>Project "C:\Users\Caroline\Documents\GitHub\apPlusPlus1415\SmflExperiment\SmflExperiment\SmflExperiment.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         SmflExperiment.vcxproj -> C:\Users\Caroline\Documents\GitHub\apPlusPlus1415\SmflExperiment\x64\Debug\SmflExperiment.exe
+     1>Done Building Project "C:\Users\Caroline\Documents\GitHub\apPlusPlus1415\SmflExperiment\SmflExperiment\SmflExperiment.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.50
+Time Elapsed 00:00:00.16
