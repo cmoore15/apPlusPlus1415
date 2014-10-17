@@ -37,13 +37,13 @@ void Board::initializeCells()
 		cells[i].resize(height);
 		for(int j = 0; j < height; j++)
 		{
-			if(j == 10 || i == 10)
+			if(j == (Global::getGridSize() / 2) || i == (Global::getGridSize() / 2))
 			{
-				cells[i][j] = new Cell(true, i * -(Global::CELL_SIZE), j * -(Global::CELL_SIZE));
+				cells[i][j] = new Cell(true, i * -(Global::getCellSize()), j * -(Global::getCellSize()));
 			}
 			else
 			{
-				cells[i][j] = new Cell(false, i * -(Global::CELL_SIZE), j * -(Global::CELL_SIZE));
+				cells[i][j] = new Cell(false, i * -(Global::getCellSize()), j * -(Global::getCellSize()));
 			}
 		}
 	}

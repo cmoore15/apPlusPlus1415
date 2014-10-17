@@ -35,18 +35,6 @@ void Game::run(RenderWindow& window)
 			{
 				window.close();
 			}
-			/*else if (event.type == Event::KeyPressed)
-			{
-				window.clear();
-
-			board->draw(window);
-			board->prepUpdate();
-			board->update();
-
-			window.display();
-
-			clock.restart();
-			}*/
 		}
 
 		Time elapsed = clock.getElapsedTime();
@@ -63,20 +51,4 @@ void Game::run(RenderWindow& window)
 			clock.restart();
 		}
 	}
-
-	/*string s = "";
-
-	while(true)
-	{
-		//board->print();
-		board->draw(window);
-		board->prepUpdate();
-		board->update();
-
-		cin >> s;
-		if(s == "quit")
-		{
-			break;
-		}
-	}*/
 }
