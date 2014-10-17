@@ -4,6 +4,7 @@
 using std::vector;
 using std::string;
 
+//contains all cells 
 class Board
 {
 private: 

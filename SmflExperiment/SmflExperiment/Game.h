@@ -1,5 +1,6 @@
 #include "Board.h"
 
+//contains and runs all parts of the Game of Life 
 class Game
 {
 private: 

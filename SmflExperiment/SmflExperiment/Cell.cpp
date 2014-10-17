@@ -9,6 +9,7 @@ using std::string;
 
 Cell::Cell(int x, int y)
 {
+	//default to dead
 	val = false;
 	next = false;
 	rect = *(new RectangleShape(Vector2f(Global::getCellSize() - 1, Global::getCellSize() - 1)));
@@ -48,6 +49,7 @@ void Cell::addNeighbor(Cell* c)
 	neighbors.push_back(c);
 }
 
+//finds the value for the next iteration 
 void Cell::prepUpdate()
 {
 	int numAlive = 0;
@@ -74,6 +76,7 @@ void Cell::prepUpdate()
 	}
 }
 
+//updates the cell to the next itertation 
 void Cell::update()
 {
 	val = next;
@@ -81,6 +84,7 @@ void Cell::update()
 	updateRect();
 }
 
+//returns a string representation of the state, 1=true, 0=false 
 string Cell::toString()
 {
 	if(val)
@@ -104,6 +108,7 @@ void Cell::draw(RenderWindow& window)
 	window.draw(rect);
 }
 
+//changes the color of the rectangle to be the current value of the cell 
 void Cell::updateRect()
 {
 	if (val)

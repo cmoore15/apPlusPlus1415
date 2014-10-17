@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+//holds varriables that have to be accessed by multiple layers of the game 
 class Global
 {
 public: 

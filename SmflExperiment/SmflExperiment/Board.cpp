@@ -32,6 +32,7 @@ Board::Board(int l, int h)
 void Board::initializeCells()
 {
 	cells.resize(length);
+	//creates the cells in the boards based on the size of the grid 
 	for(int i = 0; i < length; i++)
 	{
 		cells[i].resize(height);
@@ -48,6 +49,7 @@ void Board::initializeCells()
 		}
 	}
 
+	//adds the neighbors to each of the cells 
 	for(int i = 0; i < length; i++)
 	{
 		for(int j = 0; j < height; j++)
@@ -72,6 +74,7 @@ void Board::initializeCells()
 
 }
 
+//prepares cells for next iteration 
 void Board::prepUpdate()
 {
 	for(int i = 0; i < length; i++)
@@ -83,6 +86,7 @@ void Board::prepUpdate()
 	}
 }
 
+//updates cells to the next iteration 
 void Board::update()
 {
 	for(int i = 0; i < length; i++)

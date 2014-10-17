@@ -5,6 +5,7 @@ using namespace sf;
 using std::vector;
 using std::string;
 
+//a single live or dead block, and knows its neighbors 
 class Cell
 {
 private:
